@@ -12,7 +12,7 @@ class Task:
             self.date = date_str
 
     def markDone(self):
-        self.completed = True
+        self.completed = not self.completed
 
     def to_dict(self):
         return {
