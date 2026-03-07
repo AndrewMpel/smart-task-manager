@@ -1,6 +1,7 @@
 import json
 from Task import Task
 from datetime import datetime
+import pandas as pd
 
 class ToDoList:
     def __init__(self):
@@ -40,3 +41,6 @@ class ToDoList:
         if 0 <= id - 1 < len(self._Tasks): 
             task = self._Tasks[id-1]
             task.markDone()
+
+    def DataFrameConv(self):
+        dataframe = pd.read_json("List.json")
